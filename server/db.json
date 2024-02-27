@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "category": "TV",
+      "id": "12"
+    },
+    {
+      "category": "PC",
+      "id": "34"
+    },
+    {
+      "category": "MobilePhones",
+      "id": "56"
+    },
+    {
+      "category": "Laptops",
+      "id": "78"
+    }
+  ],
+  "products": [
+    {
+      "id": "c8a7",
+      "Category": "PC",
+      "productName": "1 pc",
+      "Price": 5050,
+      "Quantity": 5
+    }
+  ]
+}

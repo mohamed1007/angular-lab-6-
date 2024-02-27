@@ -1,0 +1,36 @@
+<div class="row">
+  @for (product of filteredProduct; track product.id) {
+    <div class="col-sm-3">
+      <div class="card m-4" style="width: auto;">      
+        <img [src]="product.image" class="card-img-top" alt="..." style="height: 400px; width: auto; border-radius: 5px;">
+        <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text">Price : {{product.price}}</p>
+            <p class="card-text" *ngIf="product.quantity === 0">Out of stock</p>
+            <p class="card-text" *ngIf="product.quantity === 1">Last one item</p>
+            <p class="card-text" *ngIf="product.quantity === 2">Last two items</p>
+            <p class="card-text" *ngIf="product.quantity > 2">In stock : {{product.quantity}}</p>
+            <p class="card-text">category : {{product.CategoryID}}</p>
+           
+            <div class="row justify-content-between">
+                <div class="col-md-9">
+                  <button [disabled]="product.quantity === 0" (click)="togglePurchase(product.id); addToCart(product)" class="btn btn-success">
+                    Buy Now
+                  </button>
+                </div>
+                <div class="col-md-3">
+                  <button [routerLink]="['/productDetails', product.id]" routerLinkActive="router-link-active" class="btn btn-primary">
+                    Details
+                  </button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+  }
+
+  
+
+  
+</div>

@@ -1,0 +1,16 @@
+body {
+    margin-bottom: 100px; /* Add margin to the bottom of the body to prevent content from being hidden behind the footer */
+  }
+  .footer {
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 50px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the footer stays above other content */
+  }
+  .footer p {
+    margin-bottom: 0; /* Remove default margin for paragraphs */
+  }
